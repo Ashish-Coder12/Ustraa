@@ -1,38 +1,120 @@
-.App {
+.product-section {
+  width: 70%;
+  padding-top: 70px;
+  margin: auto;
+}
+.list {
+  border-top: 1px solid rgba(56, 56, 56, 0.507);
+  border-bottom: 1px solid rgba(56, 56, 56, 0.507);
+  display: flex;
+  align-items: center;
+  list-style: none;
+  overflow-x: scroll;
+}
+.list li {
+  color: white;
+  margin: 10px 10px;
+  width: 150px;
+  padding: 20px 7px;
+  border-radius: 6px;
   text-align: center;
+  background-position: center;
+  background-size: cover;
+  background-color: rgb(36, 36, 36);
+}
+.list li a {
+  width: 150px;
+}
+.total {
+  width: 95%;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.product-wrapper {
+  display: flex;
+  width: 60%;
+  margin: auto;
+  overflow-x: scroll;
+  align-items: center;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.product-wrapper::-webkit-scrollbar {
+  width: 2px;
+  display: block;
+  height: 5px;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.dropdown {
+  font-size: 16px;
+  border: 1px solid rgba(34, 34, 34, 0.603);
+  padding: 15px 30px;
+  cursor: pointer;
+  margin-left: 10px;
+}
+.categoriesbottom {
+  border: 1px solid black;
+  width: 200px;
+  position: relative;
+  left: -1000px;
+  background-color: white;
+  bottom: 100px;
   display: flex;
   flex-direction: column;
+  list-style: none;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  /* display: none; */
+  transition: all 0.7s ease-in-out;
+}
+.active {
+  left: 10px;
+}
+.categoriesbottom li {
+  cursor: pointer;
+  width: 100%;
+  padding: 15px;
+}
+.categoriesbottom li:hover {
+  color: rgb(0, 140, 255);
+  background-color: rgba(128, 128, 128, 0.219);
+}
+::-webkit-scrollbar-track {
+  width: 2px;
+  height: 5px;
+}
+::-webkit-scrollbar-thumb {
+  background-color: rgb(179, 179, 179);
+  width: 1px;
+  height: 2px;
+  border-radius: 20px;
 }
 
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+@media (max-width: 1050px) {
+  .product-wrapper {
+    justify-content: center;
+    flex-direction: column;
+    width: 80%;
+    margin: auto;
+    align-items: center;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media (max-width: 1000px) {
+  .product-section {
+    width: 95%;
+    /* margin-right: 0; */
+  }
+  .list {
+    display: flex;
+    justify-content: space-between;
+    /* justify-content: center; */
+    /* align-items: center; */
+  }
+  .list li {
+    width: 150px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+@media (max-width: 1710px) {
+  .product-section {
+    width: 90%;
   }
 }
